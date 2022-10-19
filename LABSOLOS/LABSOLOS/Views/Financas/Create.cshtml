@@ -1,0 +1,44 @@
+﻿@model LABSOLOS.Models.Financeiro
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Financeiro</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="valorTotal" class="control-label"></label>
+                <input asp-for="valorTotal" class="form-control" />
+                <span asp-validation-for="valorTotal" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="formaPag" class="control-label"></label>
+                <input asp-for="formaPag" class="form-control" />
+                <span asp-validation-for="formaPag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="finalizado" class="control-label"></label>
+                <input asp-for="finalizado" class="form-control" />
+                <span asp-validation-for="finalizado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
