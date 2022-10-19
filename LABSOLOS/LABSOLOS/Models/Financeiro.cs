@@ -14,6 +14,7 @@ namespace LABSOLOS.Models
 
         [Required(ErrorMessage = "Conta é obrigatório...")]
         [Display(Name = "Solicitacoes:")]
+        public int solicitacaoid { get; set; }
         public Solicitacao solicitacao { get; set; }
 
         [Display(Name = "Valor Total:")]
